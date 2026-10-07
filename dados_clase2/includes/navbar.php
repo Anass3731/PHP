@@ -9,6 +9,11 @@ $paginas = [
     'ejercicio2.php' => '2️⃣ Dado con mensajes',
     'ejercicio3.php' => '3️⃣ Dado doble',
     'ejercicio4.php' => '4️⃣ Historial',
+    'ejercicio5.php' => '5️⃣ Diccionario de dados',
+    'ejercicio6.php' => '6️⃣ Marcador',
+    'ejercicio7.php' => '7️⃣ Frecuencias',
+    'ejercicio8.php' => '8️⃣ Premios',
+    'ejercicio9.php' => '9️⃣ Personajes',
 ];
 
 function esActiva($pagina, $actual) {

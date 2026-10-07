@@ -12,7 +12,7 @@ for ($i=0; $i<=1; $i++) {
     $suma_total = $suma_total + $numero_dado;
 }
 
-
+$formularioEnviado = isset($_GET['enviar']);
 ?>
 
 <!DOCTYPE html>
@@ -27,10 +27,23 @@ for ($i=0; $i<=1; $i++) {
     <h3>tirada doble</h3>
 
 
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="GET">
+Numero de dados: <input type="text" name="name"><br>
+
+<input type="submit">
+<input type="hidden" name="enviar" value="1">
+
+</form>
     
+
+
 <main class="contenedor">
         
-
+<?php 
+if ($formularioEnviado==1) {
+    #.
+}
+?>
         <?php foreach ($tiradas as $tirada) {
          $ruta_imagen = "img/dado_".$tirada.".svg";
          echo "<img src = '$ruta_imagen' alt='Dado $tirada'>" ;
