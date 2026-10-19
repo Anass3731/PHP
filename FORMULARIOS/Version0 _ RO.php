@@ -52,7 +52,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit('Solicitud no valida.');
     }
 }
-?>
+
+
+
+//2. saneaminto: nunca se asume el tipo de lo que lllega en $_POST
+$nombreRaw = $_POST['nombre'] ?? '';
+$nombre = is_string($nombreRaw) ? trim($nombreRaw) : '';
+
+$modulosRaw = $_POST['modulos'] ?? [];
+$modulos = is_array($modulosRaw)
+    //Lista blanca:solo se aceptan modulos que existewn en modulos
+
+
+?> array_values(array_intersect(array_keys(MODULOS), array_filter($modulosRaw,'is_string')));
 
 <!DOCTYPE html>
 <html lang="en">
