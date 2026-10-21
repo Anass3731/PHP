@@ -30,6 +30,7 @@
             <a href="ejercicio4.php" class="tarjeta">
                 <h2>4. Historial de tiradas</h2>
                 <p>Bucle while + arrays</p>
+            
             </a>
         </div>
     </main>
