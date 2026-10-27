@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre mi</title>
-</head>
-<body>
-    
-    <h1>Mi playlist</h1>
-<header>
-<nav><a href="index.php">Inicio</a> | <a href="sobre.php">Sobre mi</a></nav>
-</header>
+<?php
+declare(strict_types=1);
 
-<main> 
-    <H1>Sobre mi</H1>
-    <p>Soy e estudiante de daw</p>
-</main>
-   
-    
-    <footer>proven</footer>
-</body>
-</html>
+require_once __DIR__ . '/src/bootstrap1.php';
+
+echo renderHeader('Sobre mí');
+?>
+
+<h1>Sobre mí</h1>
+
+<p>Soy estudiante de DAW.</p>
+
+<?php
+echo renderFooter();
+?>

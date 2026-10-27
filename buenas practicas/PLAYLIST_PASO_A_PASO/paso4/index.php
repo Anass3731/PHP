@@ -4,7 +4,7 @@
    
     $songs = require __DIR__ . '/data/songs.php';
 
-    renderHeader('Inicio');
+        echo renderHeader('Inicio');
 ?>
     <h1>MI PLAYLIST</h1>
 

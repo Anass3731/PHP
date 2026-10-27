@@ -1,23 +1,22 @@
 <?php 
-// 1. Creamos el marcador inicial tal como pide
+
 $marcador = [
     'Ana' => 0, 
     'Luis' => 0, 
     'Marta' => 0
 ];
 
-// 2. Simulamos 5 rondas tirando un dado para cada uno
+
 for ($i = 1; $i <= 5; $i++) {
     foreach ($marcador as $jugador => $puntos) {
         $tirada = rand(1, 6);
-        $marcador[$jugador] += $tirada; // Sumamos la tirada
+        $marcador[$jugador] += $tirada; 
     }
 }
 
-// 3. Ordenamos de mayor a menor con arsort
+
 arsort($marcador);
 
-// 4. Buscamos el ganador y comprobamos si hay empate
 $ganador = array_key_first($marcador);
 $nombres = array_keys($marcador);
 $puntuaciones = array_values($marcador);
@@ -41,14 +40,12 @@ if ($puntuaciones[0] === $puntuaciones[1]) {
     <main class="contenedor">
         <h1>Ejercicio 6 — Marcador de jugadores</h1>
 
-        <!-- Mensaje simple de ganador o empate -->
         <?php if ($empate): ?>
             <p><strong>¡Ha habido un empate en la primera posición!</strong></p>
         <?php else: ?>
             <p><strong>El ganador es: <?php echo $ganador; ?></strong></p>
         <?php endif; ?>
 
-        <!-- Tabla básica -->
         <table border="1">
             <tr>
                 <th>Jugador</th>

@@ -24,6 +24,7 @@ function renderHeader(string $title): string
                 <ul>
                     <li><a href="index.php">Inicio</a></li>
                     <li><a href="sobre.php">Sobre mí</a></li>
+                    <li><a href="contacta.php">Contacta</a></li>
                 </ul>
             </nav>
         </header>
